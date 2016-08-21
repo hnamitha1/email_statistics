@@ -1,9 +1,9 @@
 class Email < ApplicationRecord
-	def self.event_count(event)
+	def event_count(event)
     Email.where(event: event).count
   end
 
-  def self.calculate_rate(event, email_type)
+  def calculate_rate(event, email_type)
 
     total_sent_mail  = Email.where(event: 'send', email_type: email_type).count
     total_event_mail = Email.where(event: event, email_type: email_type).count
@@ -13,7 +13,7 @@ class Email < ApplicationRecord
 
   end
 
-  def self.email_types
+  def email_types
     Email.distinct.pluck(:email_type)
   end  
 

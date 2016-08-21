@@ -1,18 +1,18 @@
 <h2> Statistics</h2>
 
 
-    <%= Email.event_count('send') %> <br>
-    <%= Email.event_count('open') %> <br>
-    <%= Email.event_count('click') %> 
+    <%= @email.event_count('send') %> <br>
+    <%= @email.event_count('open') %> <br>
+    <%= @email.event_count('click') %> 
 
     <br>
     <h2>email types</h2>
   
-		<% @email_types.each do |email_type| %>
+		<% @email.email_types.each do |email_type| %>
 		  <li>
 		    <span class="email-type"><%= email_type %></span>:
-		     <%=	Email.calculate_rate( 'click', email_type,) %>
-		     <%= Email.calculate_rate( 'open', email_type) %>
+		     <%=	@email.calculate_rate( 'click', email_type,) %>
+		     <%= @email.calculate_rate( 'open', email_type) %>
 		  </li>
 		<% end %>
 

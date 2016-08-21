@@ -3,8 +3,9 @@ require 'time'
 
 class EmailsController < ApplicationController
 	skip_before_action :verify_authenticity_token
+
 	def index
-	  @email_types = Email.distinct.pluck(:email_type)
+	  @email = Email.new
 	end
 
 	def create
