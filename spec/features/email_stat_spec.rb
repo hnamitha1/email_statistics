@@ -43,7 +43,7 @@ describe 'display email statistics'  do
 
     it 'click rate per email type' do
     	expect(page).to have_content '33.33'
-      expect(page).to have_content '60.0'
+        expect(page).to have_content '60.0'
     end
   end
 end
