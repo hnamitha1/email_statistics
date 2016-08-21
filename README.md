@@ -6,10 +6,7 @@ Email Statistics
 Task
 ----
 
-Implement a web application in Ruby that:
-* can receive web hooks from Mandrill
-* processes the web hook data and stores it into a suitable data store
-* displays the following statistics
+Implement a web application in Ruby that displays the following statistics:
 * total number of emails sent
 * total number of emails opened
 * total number of clicks
