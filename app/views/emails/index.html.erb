@@ -1,24 +1,22 @@
 <div class = "container">
-	<h2> Email Statistics</h2>
-			
-
-	<p>Emails <b>sent:</b> <%= @email.event_count('send') %> </p>
-	<p>Emails <b>open:</b> <%= @email.event_count('open') %> </p>
-	<p>Emails <b>click:</b> <%= @email.event_count('click') %> </p>
+    <h2> Email Statistics</h2>
+    <p>Emails <b>sent:</b> <%= @email.event_count('send') %> </p>
+    <p>Emails <b>open:</b> <%= @email.event_count('open') %> </p>
+    <p>Emails <b>click:</b> <%= @email.event_count('click') %> </p>
 	
-	<h2> open and click rate per email type</h2>
-	<table class="table table-bordered">
-		<thead>
-		  <tr>
-		    <th>Email type</th>
-		    <th>Click rate(%)</th>
-				<th>Open rate(%)</th>
+    <h2> open and click rate per email type</h2>
+    <table class="table table-bordered">
+    	<thead>
+      		<tr>
+		   		<th>Email type</th>
+		   		<th>Click rate(%)</th>
+	            <th>Open rate(%)</th>
 			</tr>
-		</thead>
+        </thead>
 		<tbody>	
-		  <tr>
+		    <tr>
 			<% @email.email_types.each do |email_type| %>
-		   	<td><%= email_type %></td>
+		   		<td><%= email_type %></td>
 			   	<td><%=	@email.calculate_rate( 'click', email_type,) %></td>
 			   	<td><%= @email.calculate_rate( 'open', email_type) %></td>
 			</tr>	
