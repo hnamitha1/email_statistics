@@ -34,15 +34,31 @@ $ rails s
 in second tab
 
 ```sh
-$ cd llirdnam/listener/
+$ cd email_statistics/llirdnam/listener/
 $ go run listener.go
 ```
 in third tab send email data to rail server
 
 ```sh
-$ cd llirdnam/llirdnam/
+$ cd email_statistics/llirdnam/llirdnam/
 $ go run llirdnam.go http://localhost:3000/emails
 ```
 
+Then, you can open your browser and visit `localhost:3000` to see the email statistics.
 
-Then, you can open your browser and visit `localhost:9292`.
+## Testing
+
+You can run the test using the command below:
+
+```sh
+$ cd email_statistics/
+$ rspec
+```
+
+Technologies used
+-----------------
+- Ruby on Rails
+- Bootstrap
+- Rspec
+- Go
+- PostgreSQL
