@@ -1,5 +1,6 @@
 Email Statistics  
 ================
+Email Statistics allows you to quickly displays the statistics of email webhooks.
 
 **Author:** Namitha Hanumantharaya
 
@@ -59,3 +60,17 @@ Technologies used
 - Rspec
 - Go
 - PostgreSQL
+
+## Approach 
+
+Initial set up was tricky because of Go code. After getting some idea I am able to process the Go Code data and posted to `/emails` route inside emails_controller. I used Active Record and PostgreSQL for my database. I then started writing class methods in `Email` model to count the number of emails under each event and the open/click rate per email type. I did some styling using Bootstrap. 
+
+
+
+
+
+
+
+
+
+
