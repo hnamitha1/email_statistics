@@ -1,24 +1,21 @@
-# README
+Email Statistics  
+================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Author:** Namitha Hanumantharaya
 
-Things you may want to cover:
+Task
+----
 
-* Ruby version
+Implement a web application in Ruby that:
+* can receive web hooks from Mandrill
+* processes the web hook data and stores it into a suitable data store
+* displays the following statistics
+* total number of emails sent
+* total number of emails opened
+* total number of clicks
+* open rate per email type
+* click rate per email type
 
-* System dependencies
+## Requirements
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* You can use any Ruby frameworks/libraries/gems of your choice, and data store of your choice.
