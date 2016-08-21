@@ -2,13 +2,13 @@ require 'json'
 require 'time'
 
 class EmailsController < ApplicationController
-	skip_before_action :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
 
-	def index
-	  @email = Email.new
-	end
+  def index
+    @email = Email.new
+  end
 
-	def create
+  def create
     email = Email.new(email_params)
     render json: email if email.save
   end
