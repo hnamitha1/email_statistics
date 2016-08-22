@@ -16,11 +16,11 @@ Implement a web application in Ruby that displays the following statistics:
 
 ## Requirements
 
-* You can use any Ruby frameworks/libraries/gems of your choice, and data store of your choice.
+* I was asked to use any Ruby frameworks/libraries/gems of your choice, and data store of your choice.
 
 Instructions
 ------------
-These are the instructions for how to download and run the application on a local server:
+These are the instructions for how to download and run the application using a local server:
 
 ```sh
 $ git clone https://github.com/hnamitha1/email_statistics.git
@@ -29,13 +29,13 @@ $ bundle
 $ rails db:setup
 $ rails s
 ```
-in second tab
+in the second tab
 
 ```sh
 $ cd email_statistics/llirdnam/listener/
 $ go run listener.go
 ```
-in third tab send email data to rail server
+in the third tab send email data to rail server
 
 ```sh
 $ cd email_statistics/llirdnam/llirdnam/
@@ -63,9 +63,9 @@ Technologies used
 
 ## Approach 
 
-Initial set up was tricky because of Go code. After getting some idea I am able to process the Go Code data and posted to `/emails` route inside emails_controller. I used Active Record and PostgreSQL for my database. I then started writing class methods in `Email` model to count the number of emails under each event and the open/click rate per email type. I did some styling using Bootstrap. 
+Initial set up was tricky because of Go code. After getting some idea I was able to process the Go Code data and posted to `/emails` route inside emails_controller. I used Active Record and PostgreSQL for my database. I then started writing class methods in the `Email` model to count the number of emails under each event and the open/click rate per email type. I did some styling using Bootstrap. 
 
-
+now anyone can post the data to `Email`. We can avoid that by adding some security. 
 
 
 
